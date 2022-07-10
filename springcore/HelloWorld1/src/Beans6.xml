@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+        
+<bean id="employee" class="com.kkhindigyan.model.Employee" scope="prototype">
+		<constructor-arg name="employeeId" value="102883" type="java.lang.Integer" index="0"></constructor-arg>
+		<constructor-arg name="employeeName" value="Sean" type="java.lang.String" index="1"></constructor-arg>
+		<constructor-arg name="salary" value="80000" type="java.lang.Double" index="2"></constructor-arg>
+		<constructor-arg name="address" ref="address" type="com.kkhindigyan.model.Address" index="3"></constructor-arg>
+	</bean>
+ 
+	<bean id="address" class="com.kkhindigyan.model.Address">
+		<property name="addressLine1" value=""></property>
+		<property name="addressLine2" value=""></property>
+		<property name="city" value="Delhi"></property>
+		<property name="zipCode" value="959049"></property>
+	</bean>
+
+</beans>

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-import com.infotech.model.Message;
+import com.infotech.model.Message1;
 
 public class ClientTest {
 public static void main(String[] args) {
@@ -21,7 +21,7 @@ public static void main(String[] args) {
 			//Asking Spring Container to return Spring bean with id "message"
 			Object object = beanFactory.getBean("message");
 			//Covert Spring bean into your business Object
-			Message message = (Message)object;
+			Message1 message = (Message1)object;
 			
 			//Print Spring bean state
 			System.out.println(message.getMessageId()+"\t"+message.getMessage());

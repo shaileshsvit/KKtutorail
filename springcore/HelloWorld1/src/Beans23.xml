@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+<bean id="employee" class="com.infotech.model.Employee" autowire="byName">
+		<property name="employeeId" value="102092"></property>
+		<property name="employeeName" value="Sudha Verma"></property>
+		<property name="gender" value="Female"></property>
+
+	</bean>			
+		
+		
+		  	<bean id="pancard55" class="com.infotech.model.Pancard">
+				<property name="panHolderName" value="Sudha Verma"></property>
+				<property name="panNo" value="UUQ545GHH"></property>
+		
+</bean>
+		  	<bean id="pancard5" class="com.infotech.model.Pancard">
+				<property name="panHolderName" value="Sudha Verma"></property>
+				<property name="panNo" value="UUQ545GHH"></property>
+		
+</bean>
+		  
+	
+
+
+</beans>

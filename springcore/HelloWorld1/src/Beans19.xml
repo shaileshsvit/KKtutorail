@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd" default-init-method="I" default-destroy-method="D">
+<bean name="companyInfo" class="com.infotech.info.CompanyInfo">
+		<property name="empIdAndNameMap">
+			<map>
+				<entry key="1099" value="Kishan"></entry>
+				<entry key="1088" value="Sean"></entry>
+			</map>
+		</property>
+
+		<property name="studentIdMap">
+			<map>
+				<entry key="1111" value-ref="student1"></entry>
+				<entry key="2222" value-ref="student2"></entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="student1" class="com.infotech.model.Student">
+		<property name="studentId" value="1111"></property>
+		<property name="studentName" value="Jimmy"></property>
+		<property name="email" value="j@gmail.com"></property>
+		<property name="gender" value="Male"></property>
+	</bean>
+
+	<bean id="student2" class="com.infotech.model.Student">
+		<property name="studentId" value="2222"></property>
+		<property name="studentName" value="Sean"></property>
+		<property name="email" value="s@gmail.com"></property>
+		<property name="gender" value="Male"></property>
+	</bean>
+</beans>

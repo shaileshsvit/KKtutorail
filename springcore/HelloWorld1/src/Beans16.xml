@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd" default-init-method="I" default-destroy-method="D">
+        
+	<bean id="orgInfo" class="com.infotech.info.OrgInfo">
+		<property name="namesArr">
+			<array>
+				<value>Kishan</value>
+				<value>Sudha</value>
+				<value>Raj</value>
+				<value>Kishan</value>
+			</array>
+		</property>
+
+		<property name="empNameList">
+			<list>
+				<value>Sean</value>
+				<value>Tom</value>
+				<value>Jimmy</value>
+				<value>Sean</value>
+			</list>
+		</property>
+
+		<property name="empIdsSet">
+			<set>
+				<value>10009</value>
+				<value>10008</value>
+				<value>10009</value>
+			</set>
+		</property>
+	</bean>
+	
+</beans>
