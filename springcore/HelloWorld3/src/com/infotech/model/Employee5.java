@@ -1,24 +1,27 @@
 package com.infotech.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import javax.annotation.Resource;
 
-@Component//Employee employee = new Employee();
-public class Employee {
+import org.springframework.beans.factory.annotation.Required;
 
-	@Value("13313")
+public class Employee5 {
+
 	private int employeeId;
-	
-	@Value("Seafsdfsdfn Murphy")
 	private String employeeName;
 	
-	@Autowired
+	
+	@Resource(name="pancard6")
 	private Pancard pancard;
+	
+	
+	
+
 
 	public Pancard getPancard() {
 		return pancard;
 	}
+	
+	
 	public void setPancard(Pancard pancard) {
 		this.pancard = pancard;
 	}

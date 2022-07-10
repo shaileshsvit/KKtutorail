@@ -8,11 +8,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.infotech.model.Employee4;
 import com.infotech.model.Pancard;
 
-public class Test2 {
+public class Test3 {
 	public static void main(String[] args) {
 
 
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("Beans2.xml");
+ApplicationContext ctx = new ClassPathXmlApplicationContext("Beans3.xml");
 		
 		Employee4 employee = ctx.getBean("employee", Employee4.class);
 		

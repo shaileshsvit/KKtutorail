@@ -1,17 +1,10 @@
 package com.infotech.model;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
-public class Pancard {
+public class Pancard2 {
 
-	@Value("#{employee.employeeName}")
 	private String panHolderName;
-	
-	@Value("MSJS65GG")
 	private String panNo;
-	
 	public String getPanHolderName() {
 		return panHolderName;
 	}

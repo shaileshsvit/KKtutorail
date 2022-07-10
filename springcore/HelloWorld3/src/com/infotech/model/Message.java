@@ -11,7 +11,7 @@ public class Message {
 		return messageId;
 	}
 	
-	@Required
+	
 	public void setMessageId(int messageId) {
 		this.messageId = messageId;
 	}
@@ -19,7 +19,7 @@ public class Message {
 		return message;
 	}
 	
-	@Required
+	
 	public void setMessage(String message) {
 		this.message = message;
 	}
