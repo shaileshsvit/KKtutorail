@@ -1,0 +1,10 @@
+create database springjdbcdb;
+use springjdbcdb;
+CREATE TABLE employee_table(
+ employee_id int(11) NOT NULL auto_increment,
+ employee_name varchar(45) NOT NULL,
+ salary double default NULL,
+ email varchar(45) default NULL,
+ gender varchar(10) default NULL,
+  PRIMARY KEY(employee_id)
+);
