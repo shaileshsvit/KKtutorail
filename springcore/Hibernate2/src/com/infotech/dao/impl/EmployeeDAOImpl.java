@@ -11,9 +11,9 @@ import com.infotech.model.Employee;
 
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
-	
+
 	private HibernateTemplate hibernateTemplate;
-	
+
 	@Autowired
 	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
 		this.hibernateTemplate = hibernateTemplate;
@@ -34,7 +34,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	public void deleteEmployeeById(int employeeId) {
 		Employee employee=new Employee();
 		employee.setEmployeeId(employeeId);
-		
+
 		hibernateTemplate.delete(employee);
 	}
 
@@ -42,16 +42,16 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	public void updateEmployeeEmailById(String newEmail, int employeeId) {
 		Employee employee = hibernateTemplate.get(Employee.class,employeeId);
 		employee.setEmail(newEmail);
-		
+
 		hibernateTemplate.update(employee);
 	}
 
 	@Override
 	public List<Employee> getAllEmployeesDetails() {
-		
+
 		DetachedCriteria criteria= DetachedCriteria.forClass(Employee.class);
 		List<Employee> EmpList =(List<Employee>) hibernateTemplate.findByCriteria(criteria);
 		return EmpList;
 	}
-	
+
 }

@@ -13,12 +13,12 @@ import com.infotech.service.EmployeeService;
 public class EmployeeServiceImpl implements EmployeeService {
 
 	private EmployeeDAO employeeDAO;
-	
+
 	@Autowired
 	public void setEmployeeDAO(EmployeeDAO employeeDAO) {
 		this.employeeDAO = employeeDAO;
 	}
-	
+
 	@Override
 	public void addEmployee(Employee employee) {
 		employeeDAO.createEmployee(employee);

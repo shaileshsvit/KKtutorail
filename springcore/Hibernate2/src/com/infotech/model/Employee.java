@@ -15,18 +15,18 @@ public class Employee {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="employee_id")
 	private int employeeId;
-	
+
 	@Column(name="employee_name")
 	private String employeeName;
-	
+
 	@Column(name="email")
 	private String email;
-	
+
 	@Column(name="salary")
 	private Double salary;
 	@Column(name="gender")
 	private String gender;
-	
+
 	public int getEmployeeId() {
 		return employeeId;
 	}

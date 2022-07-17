@@ -16,9 +16,9 @@ public class Test {
 		EmployeeService employeeService = ctx.getBean("employeeService", EmployeeServiceImpl.class);
 		createEmployee(employeeService);
 		//getEmployeeById(employeeService);
-		
+
 		fetchAllEmployeesInfo(employeeService);
-		
+
 		//employeeService.updateEmployeeEmailById("Jimmy.s3030@yahoo.com", 2);
 		//employeeService.deleteEmployeeById(6);
 		ctx.close();
@@ -42,7 +42,7 @@ public class Test {
 		employee.setEmployeeName("Raj");
 		employee.setGender("Male");
 		employee.setSalary(60000.00);
-		
+
 		employeeService.addEmployee(employee);
 	}
 }
